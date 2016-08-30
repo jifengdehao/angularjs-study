@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div ng-app="">
+
+        <div ng-controller="firstController">
+            <input type="text" value="" ng-model="name"/>
+            <input type="text" value="" ng-model="age"/>
+            <div ng-bind="name"></div>
+            <div ng-bind="age"></div>
+            {{name}}{{age}}<!--弹出alert时，这个还没有显示完成，不好，推荐有ng-bind 这种方法-->
+        </div>
+    </div>
+    <script>
+       alert(3);
+    </script>
+    <script type="text/javascript" src="app/index.js"></script>
+<script type="text/javascript" src="../../vendor/angular/angularjs.js"></script>
+
+
+</body>
+</html>

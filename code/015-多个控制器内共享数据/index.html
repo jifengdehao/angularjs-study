@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div ng-app="myApp">
+
+         第一个控制器
+        <div ng-controller="firstController">
+           <!-- first.data <input type="text" ng-model="data.name" /><br>
+            first.Data <input type="text" ng-model="Data.message" />-->
+            <p>
+                first-name:{{data.name}}
+            </p>
+            <p>
+                first-message:{{Data.message}}<!--从工厂里取出共享数据-->
+            </p>
+            <p>
+                first-age:{{Data.age+" "+"工厂里定义共享的年龄数据"}}
+            </p>
+        </div>
+         第二个控制器
+        <div ng-controller="secondController">
+            <p>
+                second-name:{{data.name}}  <!--从上一个控制器去数据-->
+            </p>
+            <p>
+                second-message:{{Data.message}}<br><!--从工厂里取出共享数据-->
+            </p>
+            <p>
+                second-age:{{Data.age+" "+"工厂里定义共享的年龄数据"}}
+            </p>
+        </div>
+    </div>
+
+<script type="text/javascript" src="../../vendor/angular/angularjs.js"></script>
+ <script type="text/javascript" src="app/index.js"></script>
+
+
+</body>
+</html>
